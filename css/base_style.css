@@ -1,0 +1,372 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+header:hover {
+    background-color: #f0f0f0;
+}
+
+/* Logo styling */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 180px; /* Adjusted for balance */
+    height: auto;
+}
+
+/* Navbar styling */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px; /* Increased for better spacing */
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Adds some space between icons and text */
+    padding: 12px 20px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Add an underline effect for the active link */
+nav ul li a.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #218838;
+    transform: scaleX(1);
+    transition: transform 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #218838;
+    transform: scaleX(1);
+}
+
+nav ul li a::after {
+    transform: scaleX(0); /* Hidden initially */
+    transition: transform 0.3s ease;
+}
+
+/* Hover state */
+nav ul li a:hover {
+    color: #218838; /* Blue text on hover */
+}
+
+/* Button styling */
+.sign-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.sign-buttons a {
+    padding: 12px 25px;
+    font-weight: 600;
+    border-radius: 4px;
+    border: 2px solid #007BFF;
+    color: #007BFF;
+    transition: all 0.3s ease;
+}
+
+.sign-buttons a:hover {
+    color: #fff;
+    background-color: #007BFF;
+    transform: translateY(-2px);
+}
+
+/* Sign Up Button */
+.sign-buttons .sign-up {
+    background-color: #333;
+    color: #fff;
+}
+
+.sign-buttons .sign-up:hover {
+    background-color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    header {
+        padding: 20px 5%;
+    }
+
+    .sign-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Auth Buttons */
+.auth-buttons {
+    display: flex;
+    gap: 15px; /* Adjusted gap between Sign In and Sign Up buttons */
+    align-items: center; /* Align buttons vertically in the center */
+}
+
+.auth-buttons a {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Sign In Button */
+.sign-in {
+    color: #333;
+    background-color: transparent;
+    border: 1px solid #333;
+}
+
+/* Sign Up Button */
+.sign-up {
+    color: #fff;
+    background-color: #333;
+}
+
+.sign-in:hover,
+.sign-up:hover {
+    opacity: 0.8;
+}
+
+
+
+/* Footer Styles */
+footer {
+    background: linear-gradient(135deg, #333, #555);
+    color: #fff;
+    padding: 50px 20px;
+    text-align: left;
+    border-top: 3px solid #f36f45;
+    position: relative;
+    width: 100vw; /* Ensure footer spans the entire width */
+    box-sizing: border-box; /* Include padding in total width */
+    overflow: hidden;
+}
+
+/* Footer Content */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%; /* Full width for the content */
+    margin: 0 auto;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-sizing: border-box;
+}
+
+/* Footer Section */
+.footer-section {
+    flex: 1 1 220px; /* Make sections flexible */
+    margin-bottom: 30px;
+    padding: 0 15px; /* Add padding for spacing between sections */
+    box-sizing: border-box; /* Ensure padding is included in total width */
+}
+
+/* Footer Section Headings */
+.footer-section h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #f36f45;
+    position: relative;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #f36f45;
+}
+
+/* Footer Text and Links */
+.footer-section p,
+.footer-section ul,
+.footer-section li {
+    color: #ccc;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #f36f45;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex; /* Use flex to align social icons */
+    gap: 10px; /* Add spacing between icons */
+}
+
+.social-icons a {
+    color: #ccc; /* Set color for social icons */
+    transition: color 0.3s ease; /* Smooth color change on hover */
+}
+
+.social-icons a:hover {
+    color: #f36f45; /* Change color on hover */
+}
+
+/* Essential Links Section */
+.footer-section.links {
+    flex: 1 1 220px; /* Make sections flexible */
+}
+
+/* Essential Links Icons */
+.footer-section.links ul li {
+    display: flex; /* Align items in a row */
+    align-items: center; /* Center align items vertically */
+}
+
+.footer-section.links a {
+    display: flex; /* Align icon and text */
+    align-items: center; /* Center align items */
+    color: #ccc; /* Set text color */
+    transition: color 0.3s ease; /* Smooth color change on hover */
+}
+
+.footer-section.links a:hover {
+    color: #f36f45; /* Change color on hover */
+}
+
+.footer-section.links ul li i {
+    margin-right: 10px; /* Space between icon and text */
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 30px;
+    color: #bbb;
+}
+
+.footer-bottom a {
+    color: #f36f45;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom a:hover {
+    color: #fff; /* Change color on hover */
+}
+
+/* Footer Background Gradient Effect */
+footer::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(243, 111, 69, 0.4), rgba(51, 51, 51, 0));
+    z-index: 0;
+    transform: translateX(-50%);
+}
+
+footer::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    right: 50%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(49, 154, 96, 0.4), rgba(51, 51, 51, 0));
+    z-index: 0;
+    transform: translateX(50%);
+}
+
+/* Adjust z-index for footer content */
+.footer-content,
+.footer-bottom {
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-section {
+        flex: 1 1 100%; /* Stack footer sections on smaller screens */
+        text-align: center; /* Center align text for mobile */
+    }
+
+    .footer-content {
+        padding-bottom: 30px; /* Adjust padding for smaller screens */
+    }
+
+    .footer-bottom {
+        margin-top: 20px; /* Adjust margin for smaller screens */
+    }
+}

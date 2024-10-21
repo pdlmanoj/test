@@ -1,0 +1,126 @@
+/* Blog Section */
+.blog-section {
+    padding: 2rem;
+    text-align: center;
+}
+
+.blog-section h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.blog-item {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.blog-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;  /* Ensures the image covers the area without distortion */
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.blog-item h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 0.8rem;
+}
+
+.blog-item p {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 1rem;
+}
+
+.blog-item a {
+    color: #3a6ea5;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.blog-item a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Newsletter Section */
+#newsletter {
+    background-color: #f1f1f1; /* Light background for distinction */
+    padding: 60px 20px; /* Increased padding for more spacing */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+
+.newsletter-content {
+    max-width: 600px; /* Limit the width for better readability */
+    text-align: center; /* Center the text */
+}
+
+.newsletter-content h2 {
+    font-size: 2em; /* Adjust font size for headline */
+    margin-bottom: 20px;
+}
+
+.newsletter-content p {
+    font-size: 1.1em; /* Slightly larger font for readability */
+    color: #555; /* Softer color for the text */
+    margin-bottom: 30px;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center; /* Center form elements */
+    gap: 10px; /* Spacing between input and button */
+}
+
+.newsletter-form input {
+    padding: 15px; /* Larger padding for a better user experience */
+    font-size: 1em; /* Adjust font size for input */
+    border: 2px solid #ccc;
+    border-radius: 30px;
+    width: 70%; /* Larger width for the email input */
+    max-width: 400px; /* Limit max width for input field */
+    box-sizing: border-box; /* Ensure padding doesn’t overflow */
+}
+
+.newsletter-form button {
+    padding: 15px 30px; /* Larger button padding */
+    font-size: 1em; /* Adjust font size */
+    background-color: #007BFF; /* Primary blue color */
+    color: white; /* White text on button */
+    border: none;
+    border-radius: 30px; /* Rounded button */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+

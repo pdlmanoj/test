@@ -1,0 +1,36 @@
+
+/* Quote Section */
+.quote {
+    background-color: #f3f4f6;
+    padding: 2rem;
+    text-align: center;
+    font-style: italic;
+    font-size: 1.5rem;
+    margin: 2rem 0;
+    border-left: 4px solid #3a6ea5;
+}
+
+/* Video Resources Section */
+.video-resources {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.video-resources h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.video-item {
+    margin-bottom: 2rem;
+}
+
+.video-item iframe {
+    max-width: 100%;
+}
+
+.video-item p {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    color: #555;
+}
